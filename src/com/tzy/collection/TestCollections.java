@@ -1,21 +1,37 @@
 package com.tzy.collection;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 public class TestCollections {
 	public static void main(String[] args) {
+
+	}
+	public void test1(){
+		Map<Integer, String> map = new HashMap<>();
+		map.put(1, "a");
+		map.put(2, "b");
+		map.put(3, "ab");
+		map.put(4, "ab");
+		map.put(4, "ab");
+		Iterator<Map.Entry<Integer,String>> iterator = map.entrySet().iterator();
+		while(iterator.hasNext()){
+			Map.Entry<Integer,String> entry = iterator.next();
+			System.out.println(entry.getKey());
+			System.out.println(entry.getValue());
+		}
+	}
+	public void test2(){
 		ArrayList<? extends Object> arrayList = new ArrayList<String>();
-		//arrayList.add("aa");
 		Properties  prop = System.getProperties();
 		Iterator it = prop.entrySet().iterator();
 		while(it.hasNext()){
-			 Map.Entry entry=(Map.Entry)it.next();
-			    Object key = entry.getKey();
-			    Object value = entry.getValue();
-			    System.out.println(key +":"+value);
+			Map.Entry entry=(Map.Entry)it.next();
+			Object key = entry.getKey();
+			Object value = entry.getValue();
+			System.out.println(key +":"+value);
 		}
 	}
+
+
 }
+
