@@ -31,6 +31,10 @@ public class TestCollections {
 			System.out.println(key +":"+value);
 		}
 	}
+	public void test3(){
+
+	}
+
 
 
 }
