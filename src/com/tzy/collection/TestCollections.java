@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TestCollections {
 	public static void main(String[] args) {
-
+		new TestCollections().test3();
 	}
 	public void test1(){
 		Map<Integer, String> map = new HashMap<>();
@@ -32,6 +32,12 @@ public class TestCollections {
 		}
 	}
 	public void test3(){
+		Set<Long> timstamp = new HashSet<>();
+		timstamp.add(1990000l);
+		if(timstamp.contains(1990000l)){
+			timstamp.add(1990000l);
+			System.out.println("xxx");
+		}
 
 	}
 
